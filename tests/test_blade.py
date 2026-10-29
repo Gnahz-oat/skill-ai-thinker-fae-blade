@@ -88,11 +88,11 @@ class BladeTests(unittest.TestCase):
             blade.active_snapshot(self.root)
 
     def test_catalog_parses_html_split_spans_and_discovers_unknown_names(self):
-        raw = '<span>npx skills add Ai-Thinker-Open/skills --skill </span><span>new-guide</span>'
+        raw = '<span>npx skills add Ai-Thinker-AIoT/skills --skill </span><span>new-guide</span>'
         self.assertEqual(blade.official_names(raw), {"new-guide"})
         with self.assertRaises(blade.BladeError):
             blade.official_names("unrelated content")
-        raw += '<h3>another-guide</h3><pre>npx skills add Ai-Thinker-Open/skills --skill another-guide</pre><h3>next-guide</h3>'
+        raw += '<h3>another-guide</h3><pre>npx skills add Ai-Thinker-AIoT/skills --skill another-guide</pre><h3>next-guide</h3>'
         self.assertEqual(blade.official_names(raw), {"new-guide", "another-guide"})
 
     def test_config_preserves_existing_settings_for_all_three_clients(self):

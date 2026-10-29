@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = "https://docs.ai-thinker.com/skills/install.html"
 MCP_DOCS = "https://docs.ai-thinker.com/mcp/"
 MCP_URL = "https://mcp.wiki.ai-thinker.com/mcp"
-SOURCES = ["https://github.com/Ai-Thinker-Open/skills.git",
+SOURCES = ["https://github.com/Ai-Thinker-AIoT/skills.git",
            "https://gitee.com/Ai-Thinker-Open/skills.git"]
 NAME = "ai-thinker-wiki"
 
@@ -71,7 +71,7 @@ def fetch(url):
 
 
 def official_names(raw):
-    names = set(re.findall(r"npx\s+skills\s+add\s+Ai-Thinker-Open/skills\s+--skill\s+([a-z0-9-]+)", page_text(raw)))
+    names = set(re.findall(r"npx\s+skills\s+add\s+Ai-Thinker-AIoT/skills\s+--skill\s+([a-z0-9-]+)", page_text(raw)))
     if not names:
         raise BladeError("Cannot identify official Skill catalog; existing snapshot retained")
     return names

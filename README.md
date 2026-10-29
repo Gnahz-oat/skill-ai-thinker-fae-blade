@@ -2,7 +2,7 @@
 
 面向新人 FAE 的安信可全产品线助手：根据任务组合官方 Skill、检索官方知识库、补问关键条件，交付排查步骤、示例代码和可转发客户的回复。以 Windows Codex 为主，兼容 Claude Code、Cursor。
 
-**当前覆盖：13 个完整官方 Skill。** 官方安装页列出 14 项，但 2026-10-13 的官方 GitHub 地址返回 404，官方 Gitee 镜像与 npm 发布包只有 13 项，缺少 `board-pins`。本版本经过用户确认先发布，明确保留缺项；不将网页简介改写成所谓官方 Skill。引脚查询暂通过官方 MCP 与规格书完成。完整上游恢复后自动补齐。
+**当前覆盖：15 个完整官方 Skill，包含 `board-pins`。** 官方安装页列出的技能及此前已有技能均已包含在同步快照中；开发板引脚仍须核对对应官方规格书。
 
 ## 安装
 
@@ -47,7 +47,7 @@ python -m pip install -r <已安装技能目录>/scripts/requirements.txt
 
 本机每个对话首次调用主 Skill 时检查更新，同一天最多联网检查一次。`sync` 可手动立即重试；失败保留旧快照，报告更新失败。成功后生成全技能目录与逐文件 SHA-256，再原子切换当前快照；任务固定使用一个快照。
 
-仓库的 **Sync upstream** 工作流每天运行（北京时间约 09:17，GitHub 可能延迟），也可在 Actions 中手动触发。完整候选版本通过验证和测试后直接提交。官方来源当前仍缺项时，工作流会失败并保留已发布的 13 项；日志明确列出 `board-pins`。恢复后自动发现并补齐。公开仓库长期无活动时 GitHub 可能暂停定时任务，需要在 Actions 页面重新启用。
+仓库的 **Sync upstream** 工作流每天运行（北京时间约 09:17，GitHub 可能延迟），也可在 Actions 中手动触发。完整候选版本通过验证和测试后直接提交；来源缺项时工作流失败并保留已发布的快照。公开仓库长期无活动时 GitHub 可能暂停定时任务，需要在 Actions 页面重新启用。
 
 ```sh
 python skills/ai-thinker-fae-blade/scripts/blade.py sync
@@ -60,7 +60,7 @@ python -m unittest discover -s tests -v
 ## 官方来源与许可
 
 - [官方 Skill 安装指南](https://docs.ai-thinker.com/skills/install.html)
-- [官方 GitHub 仓库](https://github.com/Ai-Thinker-Open/skills)
+- [官方 GitHub 仓库](https://github.com/Ai-Thinker-AIoT/skills)
 - [官方 Gitee 镜像](https://gitee.com/Ai-Thinker-Open/skills)
 - [官方 MCP 说明](https://docs.ai-thinker.com/mcp/)
 

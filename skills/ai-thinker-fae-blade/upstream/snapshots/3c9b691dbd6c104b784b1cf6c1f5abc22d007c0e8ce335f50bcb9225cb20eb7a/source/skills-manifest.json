@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "skills": {
+    "add-scbb-module": {
+      "hash": "163ae8041cb78ba707ec359c5039b0462c1483c222a240d064ee21d0f401c220",
+      "files": 1,
+      "size": 4335
+    },
+    "add-skills": {
+      "hash": "242aa25b589f7d6353bd5b830bd409a4a659cd37a14459152685a755e5b0cb30",
+      "files": 1,
+      "size": 4192
+    },
+    "ai-thinker-bl-coredump-skill": {
+      "hash": "37a5762fdc6111ec5df1eeab8b91254f14acc1382e908b3e61562d6c093c73d4",
+      "files": 1,
+      "size": 7114
+    },
+    "ai-thinker-c-coding-standard": {
+      "hash": "aa0a800ae4d164b6190e6f1881c710d5b0064a53326ea02ba91db77a3c29803d",
+      "files": 1,
+      "size": 6887
+    },
+    "ai-wb2-uart-ota": {
+      "hash": "5ebc91810be4fbebf5de6ee04f7c86e4d415394df3ff1013a79f3c8cd143bbc5",
+      "files": 1,
+      "size": 9126
+    },
+    "board-pins": {
+      "hash": "2416b7b0299cfa2b42cd271a2809d748ff59569135bf8fa5f7d457a4ae1d5e56",
+      "files": 50,
+      "size": 166826
+    },
+    "cmw-wlan-test": {
+      "hash": "75106c176d9dc7e05c1320cfc149c2e4eae7cf2b9eb6492f947659bbbeb14206",
+      "files": 16,
+      "size": 125132
+    },
+    "coder-ai-m62-m61": {
+      "hash": "ccc9986c38cf6765376fbab67e4ebee8c698eced2554bbd3ce12136c7e6a4f45",
+      "files": 108,
+      "size": 1728366
+    },
+    "coder-ai-wb2": {
+      "hash": "4b4b32c59ad43fd2a878187ab1282d7e1e4f4459ba178ae7369c880b3a9a2c3c",
+      "files": 49,
+      "size": 347088
+    },
+    "coder-ra-01sc": {
+      "hash": "45509b71d8ba06ed09bd073485da640ae04a10ee2ae927341adb4c501f8af706",
+      "files": 3,
+      "size": 48717
+    },
+    "combo-at-commands": {
+      "hash": "c6310cd2e0d8b7d296f812a301fc3fb773369ca51c099b1b471e0fd0b75947bc",
+      "files": 16,
+      "size": 151967
+    },
+    "embedded-code-review": {
+      "hash": "31fed24e9d701f171573d2116ace722d93249c332157e4aca9609cdb2f9f5dae",
+      "files": 2,
+      "size": 22492
+    },
+    "module-selector": {
+      "hash": "8e496096e932a2d68ea7eabca0840b9e21ce35bf2de6958e5b897792d5ddb6d1",
+      "files": 6,
+      "size": 49141
+    },
+    "ota-generator": {
+      "hash": "4a10aa590c081544cca42561b43d271463b6b66e5ce8b8baa6d246777a7e2834",
+      "files": 3,
+      "size": 20999
+    },
+    "scbb-module-finder": {
+      "hash": "9084df9d8a59a9b2acf1edf40b6781dd012dd7587902d37ff352bdedd3961fb4",
+      "files": 1,
+      "size": 6033
+    }
+  }
+}

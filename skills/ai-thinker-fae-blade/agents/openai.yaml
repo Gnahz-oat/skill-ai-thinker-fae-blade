@@ -1,5 +1,5 @@
 interface:
-  display_name: "安信可FAE之刃"
+  display_name: "安信可新人FAE之刃"
   short_description: "安信可全产品线选型、开发与排障助手，按任务调度官方技能并查询知识库"
   default_prompt: "使用 $ai-thinker-fae-blade 帮我分析安信可模组问题，给出排查步骤和可转发客户的回复。"
 policy:

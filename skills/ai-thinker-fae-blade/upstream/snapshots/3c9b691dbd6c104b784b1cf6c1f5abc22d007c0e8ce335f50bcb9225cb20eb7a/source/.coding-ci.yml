@@ -1,0 +1,63 @@
+# Coding CI/CD 配置
+# https://coding.net/help/ci/ci-yml.html
+
+# 触发条件
+trigger:
+  branches:
+    include:
+      - master
+      - main
+  tags:
+    include:
+      - v*
+
+# 代码检出
+steps:
+  - name: checkout
+    git:
+      depth: 1
+
+  # 安装 Node.js
+  - name: setup-node
+    bash: |
+      curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+      apt-get install -y nodejs
+      node --version
+      npm --version
+
+  # 验证 Skills
+  - name: validate
+    bash: |
+      npm run validate
+
+  # 构建
+  - name: build
+    bash: |
+      npm run build
+
+  # 同步到 GitHub（仅 master 分支推送时）
+  - name: sync-to-github
+    if: git.ref == 'refs/heads/master' || git.ref == 'refs/heads/main'
+    bash: |
+      # 使用 Token 配置 remote
+      git remote set-url --push github "https://${GITHUB_TOKEN}@github.com/Ai-Thinker-Open/skills.git"
+
+      # 推送到 GitHub
+      git push github master
+
+  # 发布 GitHub Release（仅 tag 触发时）
+  - name: release
+    if: startsWith(git.ref, 'refs/tags/v')
+    bash: |
+      VERSION=${GIT_REF#refs/tags/v}
+      echo "Releasing version: $VERSION"
+
+      # 配置 gh CLI 认证
+      echo "$GITHUB_TOKEN" | gh auth login --with-token
+
+      # 创建 Release
+      gh release create "v${VERSION}" \
+        --repo "Ai-Thinker-Open/skills" \
+        --title "Release v${VERSION}" \
+        --generate-notes \
+        dist/**/*
