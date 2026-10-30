@@ -9,7 +9,7 @@
 需要 Node.js（用于 npx 安装）、Git、Python 3.11+。只需安装主 Skill，其目录已附带官方文件与资源：
 
 ```sh
-npx skills add Gnahz-oat/ai-thinker-fae-blade --skill ai-thinker-fae-blade
+npx skills add Gnahz-oat/skill-ai-thinker-fae-blade --skill ai-thinker-fae-blade
 ```
 
 在安装器中选择 Codex、Claude Code 或 Cursor，以及项目级/用户级安装。仅选择主 Skill，避免重复安装嵌套快照中的同名官方技能。安装后在新对话中输入：
